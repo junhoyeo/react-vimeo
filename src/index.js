@@ -47,6 +47,12 @@ class Vimeo extends React.Component {
       responsive: this.props.responsive,
       dnt: this.props.dnt,
       speed: this.props.speed,
+      keyboard: this.props.keyboard,
+      pip: this.props.pip,
+      playsinline: this.props.playsinline,
+      quality: this.props.quality,
+      texttrack: this.props.texttrack,
+      transparent: this.props.transparent,
     };
     /* eslint-enable react/destructuring-assignment */
   }
@@ -291,6 +297,40 @@ if (process.env.NODE_ENV !== 'production') {
      */
     speed: PropTypes.bool,
 
+    /**
+     * Allows for keyboard input to trigger player events.
+     */
+    keyboard: PropTypes.bool,
+
+    /**
+     * Show the picture-in-picture button in the controlbar
+     * and enable the picture-in-picture API.
+     */
+    pip: PropTypes.bool,
+
+    /**
+     * Play video inline on mobile devices, to automatically
+     * go fullscreen on playback set this parameter to false.
+     */
+    playsinline: PropTypes.bool,
+
+    /**
+     * Vimeo Plus, PRO, and Business members can default
+     * an embedded video to a specific quality on desktop.
+     */
+    quality: PropTypes.string,
+
+    /**
+     * Turn captions/subtitles on for a specific language by default.
+     */
+    texttrack: PropTypes.string,
+
+    /**
+     * The responsive player and transparent background are enabled
+     * by default, to disable set this parameter to false.
+     */
+    transparent: PropTypes.bool,
+
     // Events
     /* eslint-disable react/no-unused-prop-types */
 
@@ -378,6 +418,12 @@ Vimeo.defaultProps = {
   responsive: false,
   dnt: false,
   speed: false,
+  keyboard: true,
+  pip: false,
+  playsinline: true,
+  quality: undefined,
+  texttrack: undefined,
+  transparent: true,
 };
 
 export default Vimeo;
