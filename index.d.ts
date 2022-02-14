@@ -242,6 +242,8 @@ export interface VimeoProps {
    */
   dnt?: boolean
 
+  quality?: `4K` | `2K` | `1080p` | `720p` | `540p` | `360p` | `240p`
+
   /**
    * Sent when the Vimeo player API has loaded.
    * Receives the Vimeo player object in the first parameter.
@@ -261,7 +263,7 @@ export interface VimeoProps {
   onPause?: (event: PauseEvent) => void
   /**
    * Triggered any time the video playback reaches the end.
-   * Note: when `loop` is turned on, the ended event will not fire.
+   * Note: when `loop` is turned on | the ended event will not fire.
    */
   onEnd?: (event: EndEvent) => void
   /**
