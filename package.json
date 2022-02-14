@@ -1,6 +1,6 @@
 {
-  "name": "@u-wave/react-vimeo",
-  "version": "0.9.5",
+  "name": "@junhoyeo/react-vimeo",
+  "version": "1.0.0",
   "description": "Vimeo player component for React.",
   "main": "dist/react-vimeo.js",
   "module": "dist/react-vimeo.es.js",
@@ -65,12 +65,6 @@
     "react-test-renderer": "^17.0.1",
     "rollup": "^2.35.0",
     "tsd": "^0.19.0"
-  },
-  "workspaces": {
-    "packages": [
-      ".",
-      "./example"
-    ]
   },
   "sideEffects": false
 }
